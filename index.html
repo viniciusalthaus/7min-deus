@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão com Deus em 7 Minutos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1485413513139876');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --stone-50: #f9f8f6;
+            --stone-100: #f3f2ef;
+            --stone-200: #e7e5e0;
+            --stone-300: #d7d3cc;
+            --stone-400: #a39e93;
+            --stone-500: #736f66;
+            --stone-600: #57534e;
+            --stone-700: #44403c;
+            --stone-800: #292524;
+            --stone-900: #1c1917;
+            --bg-main: #FDFCF8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--stone-900);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .italic { font-style: italic; }
+        .font-bold { font-weight: 700; }
+        .font-medium { font-weight: 500; }
+        .text-stone-500 { color: var(--stone-500); }
+        .text-stone-600 { color: var(--stone-600); }
+        .text-stone-400 { color: var(--stone-400); }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mt-8 { margin-top: 2rem; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-dark {
+            background-color: var(--stone-800);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background-color: var(--stone-700);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            padding: 1.5rem 0;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 0.75rem 0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: var(--stone-800);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 8rem 0 4rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .hero-blob-1 {
+            position: absolute;
+            top: 5rem;
+            left: 2.5rem;
+            width: 16rem;
+            height: 16rem;
+            background: var(--stone-300);
+            border-radius: 50%;
+            filter: blur(64px);
+        }
+
+        .hero-blob-2 {
+            position: absolute;
+            bottom: 5rem;
+            right: 2.5rem;
+            width: 24rem;
+            height: 24rem;
+            background: var(--stone-200);
+            border-radius: 50%;
+            filter: blur(64px);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            background: var(--stone-100);
+            color: var(--stone-600);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            max-width: 64rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 4rem; }
+            .hero { padding: 12rem 0 8rem; }
+        }
+
+        @media (min-width: 1024px) {
+            h1 { font-size: 5rem; line-height: 0.9; }
+        }
+
+        .hero-p {
+            font-size: 1.125rem;
+            color: var(--stone-600);
+            max-width: 42rem;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .bg-stone-50 { background-color: var(--stone-50); }
+        .bg-stone-800 { background-color: var(--stone-800); color: white; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title { font-size: 2.5rem; }
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--stone-600);
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .light .section-subtitle { color: var(--stone-200); }
+
+        /* Why Section */
+        .why-grid {
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .why-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+
+        .why-text {
+            font-size: 1rem;
+            color: var(--stone-700);
+            line-height: 1.7;
+        }
+
+        .why-text p { margin-bottom: 1rem; }
+
+        .why-image-wrapper {
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .why-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: rotate(3deg);
+            background: var(--stone-200);
+        }
+
+        .why-quote {
+            position: absolute;
+            bottom: -1.5rem;
+            left: -1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            max-width: 20rem;
+            transform: rotate(-3deg);
+            border: 1px solid var(--stone-100);
+            color: var(--stone-900);
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .benefit-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid var(--stone-100);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--stone-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stone-700);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feedbacks */
+        .feedbacks-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .feedbacks-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .feedback-card {
+            background: rgba(87, 83, 78, 0.5);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--stone-600);
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+            color: var(--stone-400);
+        }
+
+        .feedback-user {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .user-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--stone-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* Offer */
+        .offer-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--stone-100);
+        }
+
+        @media (min-width: 768px) {
+            .offer-card { flex-direction: row; }
+        }
+
+        .offer-left {
+            flex: 1;
+            padding: 2rem;
+            background: var(--stone-50);
+        }
+
+        @media (min-width: 768px) {
+            .offer-left { padding: 3rem; }
+        }
+
+        .offer-right {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .offer-right { padding: 3rem; }
+        }
+
+        .offer-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .offer-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--stone-700);
+        }
+
+        .check-icon {
+            color: var(--stone-800);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid var(--stone-200);
+            text-align: left;
+        }
+
+        .price-old {
+            color: var(--stone-400);
+            text-decoration: line-through;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-new {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-symbol { font-size: 1.5rem; font-weight: 700; }
+        .price-value { font-size: 4.5rem; font-weight: 700; }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--stone-200);
+            padding: 1rem 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 0.5rem 0;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--stone-800);
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--stone-600);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0.5rem 0 1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--stone-100);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--stone-500);
+        }
+
+        .footer-link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Floating Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            z-index: 40;
+            display: none;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.5s ease;
+        }
+
+        .floating-cta.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (min-width: 768px) {
+            .floating-cta { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                </div>
+                <span class="logo-text">Conexão Diária</span>
+            </div>
+            <a href="https://pay.kiwify.com.br/RdRxVuP" class="btn btn-dark" style="display: none; padding: 0.5rem 1.5rem; font-size: 0.875rem;" id="nav-btn">Quero me reconectar</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="hero-blob-1"></div>
+            <div class="hero-blob-2"></div>
+        </div>
+        <div class="container text-center">
+            <span class="badge">Para quem busca paz e propósito</span>
+            <h1 class="font-serif">
+                Sente que Deus está longe? <br>
+                <span class="italic font-normal text-stone-500">Reconecte-se</span> em apenas 7 minutos.
+            </h1>
+            <p class="hero-p">
+                Um guia prático e simples para quem tem a rotina corrida, mas não quer mais passar um dia sequer sem sentir a presença do Pai.
+            </p>
+            <a href="https://pay.kiwify.com.br/RdRxVuP" class="btn btn-dark">Sim, quero me reconectar agora</a>
+            <div class="mt-8 text-stone-500" style="font-size: 0.875rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Acesso imediato e seguro</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-stone-50">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title font-serif">A verdade que ninguém te conta sobre a distância espiritual</h2>
+                <p class="section-subtitle">Você não está sozinho nessa sensação.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-text">
+                    <p>Sabe aquele peso no peito ao final do dia? Aquela sensação de que você está apenas "cumprindo tabela" e que sua fé esfriou?</p>
+                    <p>A rotina é implacável. O trabalho, os filhos, os boletos... tudo parece gritar mais alto do que a voz de Deus. E, no silêncio da noite, você se pergunta: <strong>"Onde foi que eu me perdi d'Ele?"</strong></p>
+                    <p>Você já tentou ler a Bíblia, já tentou orar por horas, mas a mente voa e o cansaço vence. O problema não é sua falta de fé, mas a falta de um <strong>caminho simples</strong> para o meio do caos.</p>
+                </div>
+                <div class="why-image-wrapper">
+                    <img src="https://picsum.photos/seed/peace/800/800" alt="Paz" class="why-image">
+                    <div class="why-quote">
+                        <p class="italic">"Eu sentia que Deus estava a quilômetros de distância, até entender que Ele só precisava de 7 minutos do meu coração aberto."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title font-serif">A Transformação que te Espera</h2>
+                <p class="section-subtitle">O que muda na sua vida quando você prioriza esses 7 minutos</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-4">Paz Real</h3>
+                    <p class="text-stone-600">Acalme a tempestade interna e sinta um alívio que o mundo não pode dar.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-4">Conexão Viva</h3>
+                    <p class="text-stone-600">Volte a ouvir a voz de Deus nos pequenos detalhes do seu dia.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-4">Constância</h3>
+                    <p class="text-stone-600">Chega de altos e baixos. Crie um hábito espiritual que realmente dura.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-4">Menos Ansiedade</h3>
+                    <p class="text-stone-600">Entregue suas preocupações e descanse na certeza de que Ele cuida de tudo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-stone-800 light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title font-serif">Vidas Transformadas</h2>
+                <p class="section-subtitle">Pessoas reais que encontraram o caminho de volta</p>
+            </div>
+            <div class="feedbacks-grid">
+                <div class="feedback-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="italic mb-6">"Eu vivia correndo e me sentia culpada por não orar. Esse guia mudou tudo. Hoje meus 7 minutos são a parte mais sagrada do meu dia."</p>
+                    <div class="feedback-user">
+                        <div class="user-avatar">M</div>
+                        <div>
+                            <p class="font-bold">Mariana Silva</p>
+                            <p style="font-size: 0.75rem; opacity: 0.6;">34 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="italic mb-6">"Achei que precisava de horas para Deus me ouvir. Descobri que Ele valoriza a minha intenção. Me sinto muito mais leve e guiado."</p>
+                    <div class="feedback-user">
+                        <div class="user-avatar">R</div>
+                        <div>
+                            <p class="font-bold">Ricardo Oliveira</p>
+                            <p style="font-size: 0.75rem; opacity: 0.6;">42 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="italic mb-6">"Minha fé estava morrendo. O guia é tão simples e direto que não tem como não fazer. Recomendo para todo mundo que se sente afastado."</p>
+                    <div class="feedback-user">
+                        <div class="user-avatar">A</div>
+                        <div>
+                            <p class="font-bold">Ana Paula Santos</p>
+                            <p style="font-size: 0.75rem; opacity: 0.6;">29 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta">
+        <div class="container">
+            <div class="offer-card">
+                <div class="offer-left">
+                    <div class="mb-8">
+                        <span class="badge" style="background: white;">Oportunidade Única</span>
+                        <h2 class="font-serif" style="font-size: 2rem;">Guia Prático: Conexão em 7 Minutos</h2>
+                    </div>
+                    <ul class="offer-list">
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Passo a passo simples e direto</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Método testado para rotinas corridas</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Exercícios práticos de oração e reflexão</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Acesso vitalício no seu celular ou PC</span>
+                        </li>
+                    </ul>
+                    <div class="guarantee-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--stone-400);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <div>
+                            <p class="font-bold" style="font-size: 0.875rem;">Garantia Incondicional</p>
+                            <p style="font-size: 0.75rem; color: var(--stone-500);">7 dias para testar ou seu dinheiro de volta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-right">
+                    <p class="price-old">De R$ 47,00</p>
+                    <div class="price-new">
+                        <span class="price-symbol">R$</span>
+                        <span class="price-value font-serif">19,97</span>
+                    </div>
+                    <p style="color: var(--stone-500); margin-bottom: 2rem;">Pagamento único. Sem mensalidades.</p>
+                    <a href="https://pay.kiwify.com.br/RdRxVuP" class="btn btn-dark btn-full">
+                        Quero meu guia agora
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <div style="margin-top: 1.5rem;">
+                        <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 0.5rem; opacity: 0.5;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard" height="20">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" height="14" style="margin-top: 3px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Pix_logo.svg" alt="Pix" height="18">
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--stone-400); text-transform: uppercase; letter-spacing: 0.1em;">Ambiente 100% Seguro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-stone-50">
+        <div class="container faq-container">
+            <div class="section-header">
+                <h2 class="section-title font-serif">Perguntas Comuns</h2>
+                <p class="section-subtitle">Tire suas dúvidas e comece hoje mesmo</p>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Funciona mesmo se eu estiver muito afastado de Deus?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Com certeza. O guia foi desenhado justamente para quem sente esse abismo. Ele foca em pequenos passos para que você volte a sentir a presença d'Ele sem pressão ou culpa.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Preciso ter muito conhecimento bíblico?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Não. A linguagem é simples e direta. O objetivo é a sua experiência pessoal com Deus, não um estudo teológico complexo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quanto tempo por dia eu realmente preciso?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Apenas 7 minutos. É claro que você pode estender se quiser, mas o método garante que em 7 minutos você já consiga se desconectar do mundo e se ligar ao Pai.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Como eu recebo o material?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para baixar o seu guia em PDF. Você pode ler no celular, tablet ou computador.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>E se eu não gostar do conteúdo?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Não tem problema. Você tem 7 dias de garantia incondicional. Se sentir que o guia não é para você, basta nos enviar um e-mail e devolvemos 100% do seu investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                </div>
+                <span class="logo-text">Conexão Diária</span>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-link-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>Compra 100% Segura</span>
+                </div>
+                <div class="footer-link-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <span>Acesso Imediato</span>
+                </div>
+                <div class="footer-link-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Suporte via E-mail</span>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.75rem; color: var(--stone-400); max-width: 32rem; margin: 0 auto;">
+                Este produto não garante resultados milagrosos. A reconexão espiritual depende da sua dedicação e entrega pessoal. © 2026 Conexão Diária. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <div class="floating-cta" id="floating-cta">
+        <a href="https://pay.kiwify.com.br/RdRxVuP" class="btn btn-dark btn-full" style="font-size: 1rem;">
+            Quero me reconectar agora
+        </a>
+    </div>
+
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1485413513139876&ev=PageView&noscript=1"
+    /></noscript>
+
+    <script>
+        // Simple scroll logic
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const navBtn = document.getElementById('nav-btn');
+            const floatingCta = document.getElementById('floating-cta');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navBtn.style.display = 'block';
+            } else {
+                navbar.classList.remove('scrolled');
+                navBtn.style.display = 'none';
+            }
+
+            if (window.scrollY > 600) {
+                floatingCta.classList.add('visible');
+            } else {
+                floatingCta.classList.remove('visible');
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
